@@ -40,6 +40,10 @@ function App() {
       </Router>
     </AuthProvider>
   );
+  <div className="bg-white text-black dark:bg-black dark:text-white p-4">
+  <h1 className="text-xl font-bold">Bill of Materials (BOM)</h1>
+</div>
+
 }
 
 export default App;
