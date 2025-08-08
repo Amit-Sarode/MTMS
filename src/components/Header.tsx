@@ -73,7 +73,9 @@ const Header: React.FC<HeaderProps> = () => {
           <div className='hidden lg:block'>
             <TabNavigation />
           </div>
-          
+          <div className="dark">
+  {/* rest of your app */}
+</div>          
           <div className="flex items-center relative" ref={dropdownRef}>
             <button 
               onClick={() => setShowDropdown(!showDropdown)}

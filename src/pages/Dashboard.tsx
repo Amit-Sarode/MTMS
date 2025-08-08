@@ -11,24 +11,20 @@ import TabNavigation from '../components/TabNavigation';
 const Dashboard = () => {
   const { user } = useAuth();
   const [searchTerm, setSearchTerm] = useState('');
-  
-  if (!user) {
-    // return <Navigate to="/login" />;
-  }
 
   const handleSearch = (term: string) => {
     setSearchTerm(term);
   };
 
   return (
-    <div className="min-h-screen bg-[hsl(var(--background))] flex flex-col">
+    <div className="min-h-screen dark:bg-black bg-white text-black">
       <Header onSearch={handleSearch} />
-      
+
       <main className="flex-1 container mx-auto px-4 py-6">
-         <div className='block lg:hidden'>
-            <TabNavigation />
-          </div>
-        
+        <div className='block lg:hidden'>
+          <TabNavigation />
+        </div>
+
         <div className="mt-6">
           <Routes>
             <Route path="/" element={<Navigate to="/bom" replace />} />

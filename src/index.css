@@ -4,6 +4,13 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%; /* white */
+    --foreground: 222 47% 11%; /* dark text */
+  }
+}
+
+@layer base {
+  :root {
     --primary: 210 100% 35%;  /* Deep blue */
     --primary-light: 210 100% 45%;
     --secondary: 200 70% 50%;  /* Lighter blue */

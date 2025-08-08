@@ -118,6 +118,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 };
 
   return (
+      <div className="min-h-screen bg-black text-white">
     <div className="min-h-screen bg-[hsl(var(--background))] flex items-center justify-center p-4">
       <div className="w-full max-w-md animate-fadeIn">
         <div className="card">
@@ -207,6 +208,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               </Link>
             </div>
           </form>
+        </div>
         </div>
 
         <Snackbar
