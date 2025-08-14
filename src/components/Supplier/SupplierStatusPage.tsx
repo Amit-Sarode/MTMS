@@ -65,7 +65,7 @@ const SupplierStatusPage: React.FC<SupplierStatusPageProps> = ({ searchTerm }) =
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Production Readiness Review</h1>
+        <h1 className="text-gray-900 dark:text-gray-100 font-bold">Production Readiness Review</h1>
       </div>
       
       {/* Filters and Actions */}
@@ -86,7 +86,7 @@ const SupplierStatusPage: React.FC<SupplierStatusPageProps> = ({ searchTerm }) =
         </div>
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <Search size={18} className="text-gray-500" />
+            <Search size={18} className="text-gray-900 dark:text-gray-100" />
           </div>
           <input
             type="text"
@@ -97,10 +97,10 @@ const SupplierStatusPage: React.FC<SupplierStatusPageProps> = ({ searchTerm }) =
       </div>
       
       {/* Supplier Table */}
-      <div className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
+      <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md border border-gray-200 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-gray-50 border-b border-gray-200">
+            <thead className="bg-white dark:bg-gray-800 p-4 border-b border-gray-200">
               <tr>
                 <th className="px-4 py-3 pl-7 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">MR ID</th>
                 <th className="px-4 py-3 pl-6 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Supplier</th>

@@ -34,9 +34,9 @@ const MrForm: React.FC<MrFormProps> = ({ onSubmit, onCancel, editData }) => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-900 dark:text-gray-100">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Client Name</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1 text-gray-900 dark:tet-gray-100">Client Name</label>
           <input
             type="text"
             value={clientName}
@@ -45,7 +45,7 @@ const MrForm: React.FC<MrFormProps> = ({ onSubmit, onCancel, editData }) => {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Created Date</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1 text-gray-900 dark:text-gray-100">Created Date</label>
           <input
             type="date"
             value={createdDate}
@@ -56,7 +56,7 @@ const MrForm: React.FC<MrFormProps> = ({ onSubmit, onCancel, editData }) => {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">Items</label>
+        <label className="text-gray-900 dark:text-gray-100">Items</label>
         {items.map((item, index) => (
           <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 border p-4 rounded bg-gray-50">
             <div>

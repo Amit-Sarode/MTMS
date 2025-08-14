@@ -85,7 +85,7 @@ const [mrToEdit, setMrToEdit] = useState<IMr | null>(null);
 
 
   return (
-    <div className="space-y-6">
+    <div className="bg-white dark:bg-gray-800 p-4">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">Material Requisitions (MR)</h1>
       </div>
@@ -118,10 +118,10 @@ const [mrToEdit, setMrToEdit] = useState<IMr | null>(null);
       </div>
       
       {/* MR Table */}
-      <div className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
+      <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md border border-gray-200 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-gray-50 border-b border-gray-200">
+            <thead className="bg-white dark:bg-gray-800 p-4 border-b border-gray-200">
               <tr>
                 <th className="px-4 py-3 pl-10 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">MR ID</th>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Client Name</th>

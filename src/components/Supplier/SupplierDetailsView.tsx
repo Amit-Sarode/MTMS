@@ -12,7 +12,7 @@ const SupplierDetailsView: React.FC<SupplierDetailsViewProps> = ({ supplier }) =
       <div className="flex flex-wrap justify-between items-center">
         <div>
           <h3 className="text-lg font-semibold">Supplier Details: {supplier.supplierName}</h3>
-          <p className="text-sm text-gray-500">MR: {supplier.mrId.slice(0, 8).toUpperCase()} • Assigned: {supplier.assignedDate}</p>
+          <p className="text-sm text-gray-900 dark:text-gray-100">MR: {supplier.mrId.slice(0, 8).toUpperCase()} • Assigned: {supplier.assignedDate}</p>
         </div>
         
         <div className="flex space-x-2">
@@ -25,32 +25,32 @@ const SupplierDetailsView: React.FC<SupplierDetailsViewProps> = ({ supplier }) =
         </div>
       </div>
       
-      <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+      <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 border-b border-gray-200 bg-gray-50">
           <div>
-            <p className="text-sm text-gray-500">Contact Person</p>
+            <p className="text-gray-900 dark:text-gray-100">Contact Person</p>
             <p className="font-medium">{supplier.contactPerson}</p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Contact Number</p>
+            <p className="text-sm text-gray-900 dark:text-gray-100">Contact Number</p>
             <p className="font-medium">{supplier.contactNumber}</p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Status</p>
+            <p className="text-sm text-gray-900 dark:text-gray-100">Status</p>
             <p className="font-medium capitalize">{supplier.status.replace('_', ' ')}</p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Available Items</p>
+            <p className="text-sm text-gray-900 dark:text-gray-100">Available Items</p>
             <p className="font-medium">{supplier.availableItems} / {supplier.totalItems}</p>
           </div>
         </div>
         
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-gray-50">
+            <thead className="bg-white dark:bg-gray-800 p-4">
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Item Name</th>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Item Code</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-900 dark:text-gray-100 uppercase tracking-wider">Item Name</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-900 dark:text-gray-100 uppercase tracking-wider">Item Code</th>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Unit</th>
                 <th className="px-4 py-3 pl-10 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>

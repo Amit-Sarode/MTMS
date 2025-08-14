@@ -24,8 +24,8 @@ const Dashboard = () => {
     <div className="min-h-screen bg-[hsl(var(--background))] flex flex-col">
       <Header onSearch={handleSearch} />
       
-      <main className="flex-1 container mx-auto px-4 py-6">
-         <div className='block lg:hidden'>
+      <main className="bg-white dark:bg-gray-800 p-4">
+         <div className='text-gray-900 dark:text-gray-100'>
             <TabNavigation />
           </div>
         

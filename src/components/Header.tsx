@@ -61,11 +61,11 @@ const Header: React.FC<HeaderProps> = () => {
     }, []);
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
-      <div className="container mx-auto px-4 py-3">
+    <header className="bg-white dark:bg-gray-800 p-4">
+      <div className="text-gray-900 dark:text-gray-100">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-bold text-[hsl(var(--primary))]">
+            <Link to="/" className="text-gray-900 dark:text-gray-100">
               MTMS
             </Link>
           </div>
@@ -79,7 +79,7 @@ const Header: React.FC<HeaderProps> = () => {
               onClick={() => setShowDropdown(!showDropdown)}
               className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100 transition-colors duration-150"
             >
-              <div className="w-8 h-8 rounded-full overflow-hidden bg-[hsl(var(--primary))] flex items-center justify-center text-white">
+              <div className="w-8 h-8 rounded-full overflow-hidden bg-[hsl(var(--primary))] flex items-center justify-center text-gray-900 dark:text-gray-100">
                 {user?.profilePhoto ? (
                   <img 
                     src={user.profilePhoto} 

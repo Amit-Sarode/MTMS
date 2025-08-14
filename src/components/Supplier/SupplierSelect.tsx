@@ -29,7 +29,7 @@ const SupplierSelect: React.FC<SupplierSelectProps> = ({ onSelect, onCancel }) =
     <div className="space-y-6">
       <div className="relative">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <Search size={18} className="text-gray-500" />
+          <Search size={18} className="text-gray-900 dark:text-gray-100" />
         </div>
         <input
           type="text"
@@ -52,14 +52,14 @@ const SupplierSelect: React.FC<SupplierSelectProps> = ({ onSelect, onCancel }) =
             </div>
             <div>
               <h4 className="font-medium">{supplier.name}</h4>
-              <p className="text-sm text-gray-500">{supplier.category}</p>
-              <p className="text-sm text-gray-500">{supplier.contact}</p>
+              <p className="text-sm text-gray-900 dark:text-gray-100">{supplier.category}</p>
+              <p className="text-sm text-gray-900 dark:text-gray-100">{supplier.contact}</p>
             </div>
           </div>
         ))}
         
         {filteredSuppliers.length === 0 && (
-          <div className="text-center py-8 text-gray-500">
+          <div className="text-center py-8 text-gray-900 dark:text-gray-100">
             No suppliers found matching your search.
           </div>
         )}

@@ -428,27 +428,32 @@ const BomPage: React.FC<BomPageProps> = ({ searchTerm }) => {
       </div>
 
       {/* Table Actions */}
-      <div className="flex flex-wrap items-center justify-between gap-4 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+      <div className="flex flex-wrap items-center justify-between gap-4 bg-white p-4 rounded-lg shadow-sm border border-gray-200"  >
+        <div className="bg-white dark:bg-gray-800 p-4">
+
         <div className="flex items-center space-x-2">
           <button className="secondary flex items-center space-x-2 text-sm">
             <Filter size={16} />
-            <span>Filter</span>
+            <span bg-white dark:bg-gray-800 p-4>Filter</span>
           </button>
           <button
             onClick={handleExportToExcel}
             className="secondary flex items-center space-x-2 text-sm"
           >
             <Download size={16} />
-            <span>Export</span>
+            <span bg-white dark:bg-gray-800 p-4>Export</span>
           </button>
+        </div>
         </div>
       </div>
 
       {/* BOM Table */}
       <div className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
+        <div className="bg-white dark:bg-gray-800 p-4">
+
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-gray-50 border-b border-gray-200">
+            <thead className="bg-white dark:bg-gray-800 p-4 border-b border-gray-200">
               <tr>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Client Name</th>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contact Number</th>
@@ -473,7 +478,9 @@ const BomPage: React.FC<BomPageProps> = ({ searchTerm }) => {
                         }
                         <span className="font-medium">{bom.clientName}</span>
                       </div>
+                      
                     </td>
+                    
                     <td className="px-4 py-3">{bom.clientContactNumber}</td>
                     <td className="px-4 py-3">{bom.createdDate}</td>
                     <td className="px-4 py-3">{bom.expectedDate}</td>
@@ -509,6 +516,7 @@ const BomPage: React.FC<BomPageProps> = ({ searchTerm }) => {
                           <BomDetailsView bom={selectedBom} />
                         </div>
                       </td>
+                      
                     </tr>
                   )}
                 </React.Fragment>
@@ -523,6 +531,7 @@ const BomPage: React.FC<BomPageProps> = ({ searchTerm }) => {
             </tbody>
           </table>
         </div>
+      </div>
       </div>
 
       {/* BOM Form Modal */}
