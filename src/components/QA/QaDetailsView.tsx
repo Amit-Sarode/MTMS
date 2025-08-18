@@ -31,8 +31,8 @@ const QaDetailsView: React.FC<QaDetailsViewProps> = ({ qa }) => {
         </div>
       </div>
       
-      <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 border-b border-gray-200 bg-gray-50">
+      <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 overflow-hidden">
+        <div className="bg-white dark:bg-gray-800 p-4 grid grid-cols-1 md:grid-cols-4 gap-4 p-4 border-b border-gray-200 bg-gray-50">
           <div>
             <p className="text-sm text-gray-500">QA Inspector</p>
             <p className="font-medium">{qa.inspector || 'Not Assigned'}</p>
@@ -51,10 +51,10 @@ const QaDetailsView: React.FC<QaDetailsViewProps> = ({ qa }) => {
           </div>
         </div>
         
-        <div className="overflow-x-auto">
+        <div className="bg-white dark:bg-gray-700 p-4 overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-gray-50">
-              <tr>
+            <thead className="bg-white dark:bg-gray-700 p-4">
+              <tr className='bg-white dark:bg-gray-700 p-4'>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Item Name</th>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Item Code</th>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
@@ -66,7 +66,7 @@ const QaDetailsView: React.FC<QaDetailsViewProps> = ({ qa }) => {
             </thead>
             <tbody className="divide-y divide-gray-200">
               {qa.items.map((item) => (
-                <tr key={item.id} className="hover:bg-gray-50">
+                <tr key={item.id} className="dark:hover:bg-gray-700">
                   <td className="px-4 py-3 whitespace-nowrap font-medium">{item.itemName}</td>
                   <td className="px-4 py-3 whitespace-nowrap">{item.itemCode}</td>
                   <td className="px-4 py-3 pl-10 whitespace-nowrap">{item.quantity}</td>

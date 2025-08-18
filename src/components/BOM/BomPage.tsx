@@ -428,27 +428,27 @@ const BomPage: React.FC<BomPageProps> = ({ searchTerm }) => {
       </div>
 
       {/* Table Actions */}
-      <div className="flex flex-wrap items-center justify-between gap-4 bg-white p-4 rounded-lg shadow-sm border border-gray-200"  >
+      <div className="bg-white dark:bg-gray-800 p-4 flex flex-wrap items-center justify-between gap-4 bg-white p-4 rounded-lg shadow-sm border border-gray-200"  >
         <div className="bg-white dark:bg-gray-800 p-4">
 
         <div className="flex items-center space-x-2">
-          <button className="secondary flex items-center space-x-2 text-sm">
+          <button className="bg-white dark:bg-gray-800 dark:hover:bg-gray-700 secondary flex items-center space-x-2 text-sm text-black dark:text-white">
             <Filter size={16} />
-            <span bg-white dark:bg-gray-800 p-4>Filter</span>
+            <span bg-white dark:bg-gray-800 p-4 text-black dark:text-white>Filter</span>
           </button>
           <button
             onClick={handleExportToExcel}
-            className="secondary flex items-center space-x-2 text-sm"
+            className="bg-white dark:bg-gray-800 dark:hover:bg-gray-700  secondary flex items-center space-x-2 text-sm text-black dark:text-white"
           >
             <Download size={16} />
-            <span bg-white dark:bg-gray-800 p-4>Export</span>
+            <span bg-white dark:bg-gray-800 text-white p-4 text-black dark:text-white>Export</span>
           </button>
         </div>
         </div>
       </div>
 
       {/* BOM Table */}
-      <div className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
+      <div className="bg-white dark:bg-gray-800 p-4  rounded-lg shadow-md border border-gray-200 overflow-hidden">
         <div className="bg-white dark:bg-gray-800 p-4">
 
         <div className="overflow-x-auto">
@@ -468,7 +468,7 @@ const BomPage: React.FC<BomPageProps> = ({ searchTerm }) => {
                 <React.Fragment key={bom.id}>
                   <tr
                     onClick={() => handleRowClick(bom)}
-                    className={`cursor-pointer hover:bg-gray-50 ${selectedBom?.id === bom.id ? 'bg-blue-50' : ''}`}
+                    className={`cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 ${selectedBom?.id === bom.id ? 'bg-blue-50' : ''}`}
                   >
                     <td className="px-4 py-3 whitespace-nowrap">
                       <div className="flex items-center">
@@ -512,7 +512,7 @@ const BomPage: React.FC<BomPageProps> = ({ searchTerm }) => {
                   {selectedBom?.id === bom.id && (
                     <tr>
                       <td colSpan={6} className="p-0 border-t-0">
-                        <div className="p-4 bg-gray-50">
+                        <div className="p-4 bg-white dark:bg-gray-800 p-4">
                           <BomDetailsView bom={selectedBom} />
                         </div>
                       </td>
@@ -537,7 +537,7 @@ const BomPage: React.FC<BomPageProps> = ({ searchTerm }) => {
       {/* BOM Form Modal */}
       {showForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-bold">
@@ -548,7 +548,7 @@ const BomPage: React.FC<BomPageProps> = ({ searchTerm }) => {
                     setShowForm(false);
                     setBomToEdit(null);
                   }}
-                  className="text-gray-500 hover:text-gray-700"
+                  className="text-gray-900 dark:text-gray-100 hover:text-gray-700"
                 >
                   &times;
                 </button>
@@ -568,16 +568,16 @@ const BomPage: React.FC<BomPageProps> = ({ searchTerm }) => {
 
       {/* Recently Added Stocks */}
       {stockList.length > 0 && (
-        <div className="mt-6 bg-white rounded-lg shadow-md border border-gray-200 p-4">
+        <div className="mt-6 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md border border-gray-200 p-4">
           <h2 className="text-lg font-semibold mb-4">Recently Added Stocks</h2>
           <ul className="space-y-2">
             {stockList.map(stock => (
               <li key={stock.id} className="border-b pb-2 last:border-none">
                 <div className="flex justify-between">
                   <span className="font-medium">{stock.stockName}</span>
-                  <span className="text-sm text-gray-500">ID: {stock.stockId}</span>
+                  <span className="text-sm text-gray-900 dark:text-gray-100">ID: {stock.stockId}</span>
                 </div>
-                <div className="text-sm text-gray-600">Items: {stock.items.length}</div>
+                <div className="text-sm text-gray-900 dark:text-gray-100">Items: {stock.items.length}</div>
               </li>
             ))}
           </ul>

@@ -564,7 +564,7 @@ const BomForm: React.FC<BomFormProps> = ({ onSubmit, onCancel, editData }) => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-1">
             Created Date
           </label>
           <input
@@ -577,7 +577,7 @@ const BomForm: React.FC<BomFormProps> = ({ onSubmit, onCancel, editData }) => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-1">
             Expected Date*
           </label>
           <input
@@ -690,7 +690,7 @@ const BomForm: React.FC<BomFormProps> = ({ onSubmit, onCancel, editData }) => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-1">
                     Unit
                   </label>
                   <select
@@ -719,7 +719,7 @@ const BomForm: React.FC<BomFormProps> = ({ onSubmit, onCancel, editData }) => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-1">
                     Expected Delivery Date
                   </label>
                   <input
@@ -738,7 +738,7 @@ const BomForm: React.FC<BomFormProps> = ({ onSubmit, onCancel, editData }) => {
                     onChange={(e) => handleItemChange(item.id, 'inStock', e.target.checked)}
                     className="h-4 w-4 text-[hsl(var(--primary))] focus:ring-[hsl(var(--primary))]"
                   />
-                  <label htmlFor={`inStock-${item.id}`} className="ml-2 text-sm text-gray-700">
+                  <label htmlFor={`inStock-${item.id}`} className="ml-2 text-sm text-gray-900 dark:text-gray-100">
                     Item in stock
                   </label>
                 </div>

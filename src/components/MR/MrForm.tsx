@@ -44,8 +44,8 @@ const MrForm: React.FC<MrFormProps> = ({ onSubmit, onCancel, editData }) => {
             className="w-full border border-gray-300 rounded px-3 py-2"
           />
         </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1 text-gray-900 dark:text-gray-100">Created Date</label>
+        <div className="bg-white dark:bg-gray-800 p-4">
+          <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-1 text-gray-900 dark:text-gray-100">Created Date</label>
           <input
             type="date"
             value={createdDate}
@@ -55,12 +55,12 @@ const MrForm: React.FC<MrFormProps> = ({ onSubmit, onCancel, editData }) => {
         </div>
       </div>
 
-      <div>
+      <div className ="bg-white dark:bg-gray-800 p-4">
         <label className="text-gray-900 dark:text-gray-100">Items</label>
         {items.map((item, index) => (
           <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 border p-4 rounded bg-gray-50">
-            <div>
-              <label className="block text-xs font-medium text-gray-700 mb-1">Item Name</label>
+            <div className='bg-white dark:bg-gray-800 p-4'>
+              <label className="bg-white dark:bg-gray-800 p-4 block text-xs font-medium text-gray-700 mb-1">Item Name</label>
               <input
                 type="text"
                 value={item.itemName}

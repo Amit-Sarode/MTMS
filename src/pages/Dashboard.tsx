@@ -21,7 +21,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[hsl(var(--background))] flex flex-col">
+    <div className="min-h-screen bg-white dark:bg-gray-800 p-4 flex flex-col">
       <Header onSearch={handleSearch} />
       
       <main className="bg-white dark:bg-gray-800 p-4">

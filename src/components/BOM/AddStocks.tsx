@@ -90,6 +90,7 @@ const isFormValid =
 
 
   return (
+    <div className="bg-white dark:bg-gray-800 p-4">
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
@@ -137,11 +138,11 @@ const isFormValid =
 
         <div className="space-y-6">
           {items.map((item) => (
-            <div key={item.id} className="p-4 border rounded-lg bg-gray-50 relative">
+            <div key={item.id} className="p-4 border rounded-lg bg-white dark:bg-gray-800 p-4 relative">
               <button
                 type="button"
                 onClick={() => handleRemoveItem(item.id)}
-                className="absolute top-2 right-2 p-1 text-gray-500 hover:text-red-500"
+                className="absolute top-2 right-2 p-1 text-gray-900 dark:text-gray-100 hover:text-red-500"
                 disabled={items.length === 1}
               >
                 <X size={18} />
@@ -219,7 +220,10 @@ const isFormValid =
 </button>
       </div>
     </form>
+    </div>
+    
   );
+  
 };
 
 export default AddStocks;

@@ -153,7 +153,7 @@ const ProfilePage = () => {
       </div></div>;
 
   return (
-    <div className="min-h-screen bg-[hsl(var(--background))] flex flex-col">
+    <div className="min-h-screen bg-white dark:bg-gray-800 p-4 flex flex-col">
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="mb-6">
@@ -230,7 +230,7 @@ const ProfilePage = () => {
                   <p className="text-lg" style={{ textTransform: "capitalize" }}>{name}</p>
                 )}
               </div>
-              <div>
+              <div className='bg-white dark:bg-gray-800 p-4'>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   <div className="flex items-center"><Mail size={18} className="mr-1" /> Email</div>
                 </label>

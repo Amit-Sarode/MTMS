@@ -26,7 +26,7 @@ const SupplierDetailsView: React.FC<SupplierDetailsViewProps> = ({ supplier }) =
       </div>
       
       <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 border-b border-gray-200 bg-gray-50">
+        <div className="bg-white dark:bg-gray-800 p-4 grid grid-cols-1 md:grid-cols-4 gap-4 p-4 border-b border-gray-200 bg-gray-50">
           <div>
             <p className="text-gray-900 dark:text-gray-100">Contact Person</p>
             <p className="font-medium">{supplier.contactPerson}</p>
@@ -59,7 +59,7 @@ const SupplierDetailsView: React.FC<SupplierDetailsViewProps> = ({ supplier }) =
             </thead>
             <tbody className="divide-y divide-gray-200">
               {supplier.items.map((item) => (
-                <tr key={item.id} className="hover:bg-gray-50">
+                <tr key={item.id} className="dark:hover:bg-gray-800">
                   <td className="px-4 py-3 whitespace-nowrap font-medium">{item.itemName}</td>
                   <td className="px-4 py-3 whitespace-nowrap">{item.itemCode}</td>
                   <td className="px-4 py-3 pl-10 whitespace-nowrap">{item.quantity}</td>

@@ -81,13 +81,13 @@ const QaStatusPage: React.FC<QaStatusPageProps> = ({ searchTerm }) => {
       </div>
       
       {/* Filters and Actions */}
-      <div className="flex flex-wrap items-center justify-between gap-4 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-        <div className="flex items-center space-x-2">
-          <button className="secondary flex items-center space-x-2 text-sm">
+      <div className="flex flex-wrap items-center justify-between gap-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200">
+        <div className="bg-white dark:bg-gray-800 p-4 flex items-center space-x-2">
+          <button className="bg-white dark:bg-gray-800 p-4 secondary flex items-center space-x-2 text-sm text-black dark:text-white dark:hover:bg-gray-700">
             <Filter size={16} />
             <span>Filter</span>
           </button>
-          <select className="rounded-md border border-gray-300 text-sm py-2">
+          <select className="bg-white dark:bg-gray-800 p-4 rounded-md border border-gray-300 text-sm py-2">
             <option value="all">All Status</option>
             <option value="pending">Pending</option>
             <option value="in_progress">In Progress</option>
@@ -95,20 +95,20 @@ const QaStatusPage: React.FC<QaStatusPageProps> = ({ searchTerm }) => {
             <option value="rejected">Rejected</option>
           </select>
         </div>
-        <div className="relative">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <Search size={18} className="text-gray-900 dark:text-gray-100" />
-          </div>
-          <input
-            type="text"
-            placeholder="Search QA checks..."
-            className="pl-10 py-2 border rounded-md focus:ring-primary"
-          />
-        </div>
-      </div>
+         <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Search size={18} className="text-white-500" />
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Search MRs..."
+                    className="bg-white dark:bg-gray-800 pl-10 py-2 border rounded-md focus:ring-primary"
+                  />
+                </div>
+              </div>
       
       {/* QA Table */}
-      <div className="bg-white dark:bg-gray-800 p-4">
+      <div className="bg-white dark:bg-gray-800 p-4  rounded-lg shadow-md border border-gray-200 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead className="bg-white dark:bg-gray-800 p-4 border-b border-gray-200">
@@ -127,7 +127,7 @@ const QaStatusPage: React.FC<QaStatusPageProps> = ({ searchTerm }) => {
                 <React.Fragment key={qa.id}>
                   <tr 
                     onClick={() => handleRowClick(qa)} 
-                    className={`cursor-pointer hover:bg-gray-50 transition-colors duration-150 ${selectedQa?.id === qa.id ? 'bg-blue-50' : ''}`}
+                    className={`cursor-pointer dark:hover:bg-gray-700 transition-colors duration-150 ${selectedQa?.id === qa.id ? 'bg-blue-50' : ''}`}
                   >
                     <td className="px-4 py-3 whitespace-nowrap">{qa.mrId.slice(0, 8).toUpperCase()}</td>
                     <td className="px-4 py-3 whitespace-nowrap font-medium">{qa.supplierName}</td>
@@ -174,7 +174,7 @@ const QaStatusPage: React.FC<QaStatusPageProps> = ({ searchTerm }) => {
                               <span>Approve</span>
                             </button>
                             <button 
-                              className="p-1 text-sm rounded bg-red-100 hover:bg-red-200 flex items-center text-red-700"
+                              className=" p-1 text-sm rounded bg-red-100 hover:bg-red-200 flex items-center text-red-700"
                               onClick={(e) => { 
                                 e.stopPropagation(); 
                                 handleReject(qa.id);
@@ -191,7 +191,7 @@ const QaStatusPage: React.FC<QaStatusPageProps> = ({ searchTerm }) => {
                   {selectedQa?.id === qa.id && (
                     <tr>
                       <td colSpan={7} className="p-0 border-t-0">
-                        <div className="p-4 bg-gray-50 animate-fadeIn">
+                        <div className=" dark:hover:bg-gray-700 p-4 bg-white dark:bg-gray-800 p-4  animate-fadeIn">
                           <QaDetailsView qa={selectedQa} />
                         </div>
                       </td>
@@ -202,7 +202,7 @@ const QaStatusPage: React.FC<QaStatusPageProps> = ({ searchTerm }) => {
               
               {filteredQaList.length === 0 && (
                 <tr>
-                  <td colSpan={7} className="px-4 py-8 text-center text-gray-500">
+                  <td colSpan={7} className=" bg-white dark:bg-gray-800 p-4 px-4 py-8 text-center text-gray-500">
                     No QA checks found. Items must be received from suppliers first.
                   </td>
                 </tr>
